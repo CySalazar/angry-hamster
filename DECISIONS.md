@@ -119,6 +119,25 @@ come richiesto dal brief.
     nelle impostazioni, persistito in localStorage (`ah_music`) esattamente
     come gli effetti sonori (`ah_sound`), dai quali è indipendente.
 
+## Deploy
+
+29. **Supporto al prefisso di percorso** per l'hosting su
+    `https://games.cysalazar.com/angry-hamster`: tutti gli URL del frontend
+    sono relativi (API, vendor, livelli) e il server monta lo stesso router
+    (API + statici) sia su `/` che su `/angry-hamster`. In locale nulla
+    cambia; dietro reverse proxy/tunnel il prefisso funziona senza rewrite.
+30. **Hosting di produzione**: container LXC dedicato su Proxmox
+    (VMID 126 «angry-hamster», Debian 12, unprivileged, 192.168.1.226,
+    onboot). L'app gira con Node.js via systemd (`angry-hamster.service`,
+    utente dedicato non privilegiato, dati in `/opt/angry-hamster/data`) —
+    niente Docker nel container: un processo Node è più leggero e il
+    Dockerfile resta per l'uso locale. Esposizione tramite il tunnel
+    cloudflared già esistente sull'host («homelab-proxmox-leantime»,
+    gestito da dashboard): aggiunto l'hostname `games.cysalazar.com` →
+    `http://192.168.1.226:3000` alla configurazione remota del tunnel
+    (preservando le regole esistenti) + CNAME proxied verso
+    `<tunnel-id>.cfargotunnel.com`.
+
 ## UI/UX
 
 18. **Schermate come overlay DOM** sopra il canvas (menu, selezione livello,

@@ -5,7 +5,7 @@
 window.AH_API = {
   async getPlayer() {
     try {
-      const r = await fetch('/api/player');
+      const r = await fetch('api/player');
       if (!r.ok) throw new Error(r.status);
       return await r.json();
     } catch {
@@ -15,7 +15,7 @@ window.AH_API = {
 
   async setPlayer(nome) {
     try {
-      const r = await fetch('/api/player', {
+      const r = await fetch('api/player', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome })
@@ -29,7 +29,7 @@ window.AH_API = {
 
   async getLeaderboard() {
     try {
-      const r = await fetch('/api/leaderboard');
+      const r = await fetch('api/leaderboard');
       if (!r.ok) throw new Error(r.status);
       return await r.json();
     } catch {
@@ -39,7 +39,7 @@ window.AH_API = {
 
   async postScore(entry) {
     try {
-      const r = await fetch('/api/leaderboard', {
+      const r = await fetch('api/leaderboard', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entry)
