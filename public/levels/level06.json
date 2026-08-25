@@ -1,0 +1,23 @@
+{
+  "id": 6,
+  "nome": "Tris di Gatti",
+  "descrizione": "Tre gatti su tre piattaforme, pochi criceti: il Divisore fa per tre.",
+  "parTime": 75,
+  "stelle": { "due": 9000, "tre": 13000 },
+  "criceti": ["divisore", "divisore", "classico"],
+  "blocchi": [
+    { "materiale": "vetro", "x": 890, "y": 640, "w": 16, "h": 96 },
+    { "materiale": "vetro", "x": 1140, "y": 560, "w": 16, "h": 96 },
+    { "materiale": "vetro", "x": 1390, "y": 640, "w": 16, "h": 96 }
+  ],
+  "gatti": [
+    { "x": 955, "y": 662 },
+    { "x": 1205, "y": 582 },
+    { "x": 1455, "y": 662 }
+  ],
+  "piattaforme": [
+    { "x": 950, "y": 700, "w": 150, "h": 24 },
+    { "x": 1200, "y": 620, "w": 150, "h": 24 },
+    { "x": 1450, "y": 700, "w": 150, "h": 24 }
+  ]
+}

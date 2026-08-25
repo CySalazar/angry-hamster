@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Angry Hamster</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='55' r='38' fill='%23d9913e'/><circle cx='35' cy='25' r='12' fill='%23d9913e'/><circle cx='65' cy='25' r='12' fill='%23d9913e'/><circle cx='38' cy='48' r='6' fill='%23222'/><circle cx='62' cy='48' r='6' fill='%23222'/><circle cx='50' cy='62' r='7' fill='%23f7c98b'/></svg>">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== MENU PRINCIPALE ===== -->
+    <section id="screen-menu" class="screen active">
+      <div class="menu-box">
+        <div class="logo">
+          <span class="logo-hamster">🐹</span>
+          <h1>Angry <span class="accent">Hamster</span></h1>
+          <p class="tagline">I Gatti Ladri hanno rubato le scorte di semi.<br>È ora della vendetta… a colpi di fionda!</p>
+        </div>
+        <nav class="menu-buttons">
+          <button id="btn-new-game" class="btn btn-primary">▶ Nuova Partita</button>
+          <button id="btn-levels" class="btn">🗺 Selezione Livello</button>
+          <button id="btn-board" class="btn">🏆 Classifica</button>
+          <button id="btn-settings" class="btn">⚙ Impostazioni</button>
+        </nav>
+        <p class="player-tag">Giocatore: <strong id="menu-player-name">…</strong></p>
+      </div>
+    </section>
+
+    <!-- ===== SELEZIONE LIVELLO ===== -->
+    <section id="screen-levels" class="screen">
+      <div class="panel">
+        <h2>Selezione Livello</h2>
+        <div id="levels-grid" class="levels-grid"></div>
+        <button class="btn btn-back" data-back>← Menu</button>
+      </div>
+    </section>
+
+    <!-- ===== CLASSIFICA ===== -->
+    <section id="screen-board" class="screen">
+      <div class="panel">
+        <h2>🏆 Classifica Top 10</h2>
+        <div id="board-content" class="board-content"></div>
+        <button class="btn btn-back" data-back>← Menu</button>
+      </div>
+    </section>
+
+    <!-- ===== IMPOSTAZIONI ===== -->
+    <section id="screen-settings" class="screen">
+      <div class="panel">
+        <h2>⚙ Impostazioni</h2>
+        <label class="field">
+          <span>Nome giocatore</span>
+          <input id="input-player-name" type="text" maxlength="20" placeholder="Giocatore">
+        </label>
+        <label class="field field-row">
+          <span>Effetti sonori</span>
+          <input id="input-sound" type="checkbox" checked>
+        </label>
+        <label class="field field-row">
+          <span>Musica di sottofondo</span>
+          <input id="input-music" type="checkbox" checked>
+        </label>
+        <p id="settings-feedback" class="feedback"></p>
+        <div class="row">
+          <button id="btn-save-settings" class="btn btn-primary">💾 Salva</button>
+          <button class="btn btn-back" data-back>← Menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GIOCO ===== -->
+    <section id="screen-game" class="screen">
+      <canvas id="game-canvas"></canvas>
+
+      <div id="hud">
+        <div class="hud-left">
+          <button id="btn-pause" class="hud-btn" title="Pausa">⏸</button>
+          <button id="btn-restart" class="hud-btn" title="Riavvia livello">↺</button>
+        </div>
+        <div class="hud-center">
+          <div id="hud-level" class="hud-chip">Livello 1</div>
+          <div id="hud-score" class="hud-chip hud-score">0</div>
+          <div id="hud-time" class="hud-chip">0:00</div>
+        </div>
+        <div class="hud-right">
+          <div id="hud-active" class="hud-chip hud-active"></div>
+          <div id="hud-queue" class="hud-queue"></div>
+        </div>
+      </div>
+      <div id="hud-hint" class="hud-hint"></div>
+
+      <!-- Pausa -->
+      <div id="screen-pause" class="overlay">
+        <div class="panel panel-small">
+          <h2>⏸ Pausa</h2>
+          <button id="btn-resume" class="btn btn-primary">▶ Riprendi</button>
+          <button id="btn-pause-restart" class="btn">↺ Riavvia livello</button>
+          <button id="btn-pause-menu" class="btn">🏠 Menu principale</button>
+        </div>
+      </div>
+
+      <!-- Fine livello -->
+      <div id="screen-end" class="overlay">
+        <div class="panel panel-small">
+          <h2 id="end-title">Vittoria!</h2>
+          <div id="end-stars" class="end-stars"></div>
+          <div id="end-breakdown" class="end-breakdown"></div>
+          <div id="end-badges" class="end-badges"></div>
+          <div class="row">
+            <button id="btn-end-retry" class="btn">↺ Rigioca</button>
+            <button id="btn-end-next" class="btn btn-primary">Prossimo ▶</button>
+          </div>
+          <button id="btn-end-menu" class="btn btn-back">🏠 Menu</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="/vendor/matter.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/hamsters.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

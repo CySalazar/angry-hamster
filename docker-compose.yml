@@ -1,0 +1,10 @@
+services:
+  angry-hamster:
+    build: .
+    container_name: angry-hamster
+    ports:
+      - "3000:3000"
+    volumes:
+      # Volume persistente: classifica e nome giocatore sopravvivono a down/up
+      - ./data:/app/data
+    restart: unless-stopped

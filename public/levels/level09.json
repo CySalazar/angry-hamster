@@ -1,0 +1,23 @@
+{
+  "id": 9,
+  "nome": "Doppio Guaio",
+  "descrizione": "Due fortini e un gatto gigante. Dosa bene ogni criceto.",
+  "parTime": 120,
+  "stelle": { "due": 15000, "tre": 21000 },
+  "criceti": ["corazzato", "veloce", "esplosivo", "divisore", "esplosivo", "classico"],
+  "blocchi": [
+    { "materiale": "pietra", "x": 950, "y": 785, "w": 28, "h": 110 },
+    { "materiale": "pietra", "x": 1050, "y": 785, "w": 28, "h": 110 },
+    { "materiale": "legno", "x": 1000, "y": 718, "w": 160, "h": 24 },
+    { "materiale": "vetro", "x": 1160, "y": 792, "w": 20, "h": 96 },
+    { "materiale": "pietra", "x": 1270, "y": 780, "w": 32, "h": 120 },
+    { "materiale": "pietra", "x": 1430, "y": 780, "w": 32, "h": 120 },
+    { "materiale": "pietra", "x": 1350, "y": 706, "w": 220, "h": 28 }
+  ],
+  "gatti": [
+    { "x": 1000, "y": 814 },
+    { "x": 1000, "y": 680 },
+    { "x": 1350, "y": 798, "tipo": "boss" }
+  ],
+  "piattaforme": []
+}

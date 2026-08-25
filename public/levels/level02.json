@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "nome": "Torre Traballante",
+  "descrizione": "Una torre di legno a due piani. Colpisci le fondamenta!",
+  "parTime": 75,
+  "stelle": { "due": 9000, "tre": 12500 },
+  "criceti": ["classico", "classico", "corazzato", "classico"],
+  "blocchi": [
+    { "materiale": "legno", "x": 1080, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "legno", "x": 1220, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "legno", "x": 1150, "y": 708, "w": 190, "h": 24 },
+    { "materiale": "legno", "x": 1080, "y": 648, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1220, "y": 648, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1150, "y": 588, "w": 190, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1150, "y": 814 },
+    { "x": 1150, "y": 550 }
+  ],
+  "piattaforme": []
+}

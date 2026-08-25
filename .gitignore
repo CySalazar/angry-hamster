@@ -1,0 +1,7 @@
+node_modules/
+data/db.json
+data/db.json.tmp
+.playwright-mcp/
+.remember/
+.DS_Store
+*.log

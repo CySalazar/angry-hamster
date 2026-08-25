@@ -1,0 +1,28 @@
+{
+  "id": 10,
+  "nome": "Castello del Re Gatto",
+  "descrizione": "La resa dei conti: il Re Gatto si nasconde nel suo castello di pietra.",
+  "parTime": 150,
+  "stelle": { "due": 18000, "tre": 26000 },
+  "criceti": ["corazzato", "esplosivo", "veloce", "divisore", "esplosivo", "classico"],
+  "blocchi": [
+    { "materiale": "pietra", "x": 1050, "y": 785, "w": 44, "h": 110 },
+    { "materiale": "pietra", "x": 1050, "y": 675, "w": 44, "h": 110 },
+    { "materiale": "pietra", "x": 1180, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "pietra", "x": 1330, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "pietra", "x": 1255, "y": 696, "w": 200, "h": 28 },
+    { "materiale": "vetro", "x": 1205, "y": 634, "w": 20, "h": 96 },
+    { "materiale": "vetro", "x": 1305, "y": 634, "w": 20, "h": 96 },
+    { "materiale": "vetro", "x": 1255, "y": 574, "w": 140, "h": 24 },
+    { "materiale": "pietra", "x": 1420, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "pietra", "x": 1550, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "legno", "x": 1485, "y": 698, "w": 170, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1120, "y": 814 },
+    { "x": 1255, "y": 814 },
+    { "x": 1255, "y": 656 },
+    { "x": 1485, "y": 798, "tipo": "boss", "hp": 500 }
+  ],
+  "piattaforme": []
+}

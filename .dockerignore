@@ -1,0 +1,5 @@
+node_modules
+data
+.remember
+*.log
+.DS_Store

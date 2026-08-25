@@ -1,0 +1,22 @@
+{
+  "id": 3,
+  "nome": "Boom!",
+  "descrizione": "Arriva il Criceto Esplosivo: click in volo per il gran botto.",
+  "parTime": 75,
+  "stelle": { "due": 10000, "tre": 14000 },
+  "criceti": ["classico", "esplosivo", "esplosivo", "classico"],
+  "blocchi": [
+    { "materiale": "legno", "x": 1020, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "legno", "x": 1220, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "legno", "x": 1120, "y": 708, "w": 240, "h": 24 },
+    { "materiale": "vetro", "x": 1030, "y": 648, "w": 24, "h": 96 },
+    { "materiale": "vetro", "x": 1210, "y": 648, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1120, "y": 588, "w": 240, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1080, "y": 814 },
+    { "x": 1160, "y": 814 },
+    { "x": 1120, "y": 550 }
+  ],
+  "piattaforme": []
+}

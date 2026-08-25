@@ -1,0 +1,21 @@
+{
+  "id": 7,
+  "nome": "Il Muro",
+  "descrizione": "Un muro di pietra protegge i gatti. Sfondalo o scavalcalo.",
+  "parTime": 100,
+  "stelle": { "due": 12000, "tre": 17000 },
+  "criceti": ["corazzato", "esplosivo", "veloce", "divisore", "classico"],
+  "blocchi": [
+    { "materiale": "pietra", "x": 900, "y": 785, "w": 44, "h": 110 },
+    { "materiale": "pietra", "x": 900, "y": 675, "w": 44, "h": 110 },
+    { "materiale": "pietra", "x": 900, "y": 565, "w": 44, "h": 110 },
+    { "materiale": "legno", "x": 1450, "y": 792, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1450, "y": 732, "w": 120, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1150, "y": 814 },
+    { "x": 1330, "y": 814 },
+    { "x": 1520, "y": 814 }
+  ],
+  "piattaforme": []
+}

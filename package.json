@@ -1,0 +1,15 @@
+{
+  "name": "angry-hamster",
+  "version": "1.0.0",
+  "description": "Gioco fisico-arcade 2D: lancia criceti con la fionda e abbatti le fortezze dei Gatti Ladri!",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node server/test-api.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "matter-js": "^0.20.0"
+  }
+}

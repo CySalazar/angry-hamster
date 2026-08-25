@@ -1,0 +1,24 @@
+{
+  "id": 8,
+  "nome": "Fortezza",
+  "descrizione": "Mura di pietra, tetto di legno: serve un attacco dall'alto ben piazzato.",
+  "parTime": 110,
+  "stelle": { "due": 12000, "tre": 17000 },
+  "criceti": ["esplosivo", "corazzato", "esplosivo", "veloce"],
+  "blocchi": [
+    { "materiale": "pietra", "x": 1100, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "pietra", "x": 1300, "y": 775, "w": 40, "h": 130 },
+    { "materiale": "pietra", "x": 1480, "y": 775, "w": 32, "h": 130 },
+    { "materiale": "legno", "x": 1190, "y": 696, "w": 216, "h": 28 },
+    { "materiale": "legno", "x": 1400, "y": 696, "w": 196, "h": 28 },
+    { "materiale": "legno", "x": 1260, "y": 634, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1340, "y": 634, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1300, "y": 574, "w": 140, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1200, "y": 814 },
+    { "x": 1390, "y": 814 },
+    { "x": 1300, "y": 656 }
+  ],
+  "piattaforme": []
+}

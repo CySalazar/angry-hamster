@@ -1,0 +1,25 @@
+{
+  "id": 5,
+  "nome": "Grattacielo",
+  "descrizione": "Tre piani: pietra, legno e vetro. Il Corazzato demolisce le fondamenta.",
+  "parTime": 90,
+  "stelle": { "due": 12000, "tre": 17000 },
+  "criceti": ["corazzato", "classico", "esplosivo", "veloce", "classico"],
+  "blocchi": [
+    { "materiale": "pietra", "x": 1120, "y": 780, "w": 28, "h": 120 },
+    { "materiale": "pietra", "x": 1280, "y": 780, "w": 28, "h": 120 },
+    { "materiale": "pietra", "x": 1200, "y": 706, "w": 220, "h": 28 },
+    { "materiale": "legno", "x": 1130, "y": 644, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1270, "y": 644, "w": 24, "h": 96 },
+    { "materiale": "legno", "x": 1200, "y": 584, "w": 200, "h": 24 },
+    { "materiale": "vetro", "x": 1140, "y": 536, "w": 24, "h": 72 },
+    { "materiale": "vetro", "x": 1260, "y": 536, "w": 24, "h": 72 },
+    { "materiale": "vetro", "x": 1200, "y": 488, "w": 180, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1200, "y": 814 },
+    { "x": 1200, "y": 666 },
+    { "x": 1200, "y": 450 }
+  ],
+  "piattaforme": []
+}

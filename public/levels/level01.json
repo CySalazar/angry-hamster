@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "nome": "Prima Sassata",
+  "descrizione": "Tutorial: mira e lascia andare. I gatti non sanno cosa li aspetta.",
+  "parTime": 60,
+  "stelle": { "due": 6500, "tre": 9000 },
+  "criceti": ["classico", "classico", "classico"],
+  "blocchi": [
+    { "materiale": "vetro", "x": 1020, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "vetro", "x": 1180, "y": 780, "w": 24, "h": 120 },
+    { "materiale": "vetro", "x": 1100, "y": 708, "w": 200, "h": 24 }
+  ],
+  "gatti": [
+    { "x": 1100, "y": 814 },
+    { "x": 1380, "y": 814 }
+  ],
+  "piattaforme": []
+}
