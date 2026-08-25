@@ -1,5 +1,7 @@
 # 🐹 Angry Hamster
 
+> 🎮 **Gioca online**: https://games.cysalazar.com/angry-hamster
+
 Gioco fisico-arcade 2D in stile *Angry Birds*: i **Gatti Ladri** hanno rubato le
 scorte di semi e i criceti si vendicano… a colpi di fionda! Motore fisico
 realistico (Matter.js), 10 livelli a difficoltà crescente, 5 criceti speciali,
@@ -133,6 +135,25 @@ Il mondo logico è 1600×900 con il terreno a y=840; la fionda è a x=220.
   sconfitta, stelle, badge, classifica, cambio nome, pausa, resize.
 - Ciclo Docker completo: build → up → gioco → punteggio → `down` → `up` →
   dati ancora presenti; classifica vuota al primo avvio con messaggio dedicato.
+
+## Hosting di produzione
+
+Il gioco è pubblicato su **https://games.cysalazar.com/angry-hamster**:
+
+- **Container LXC 126** «angry-hamster» su Proxmox (Debian 12, unprivileged,
+  2 core / 1 GB RAM / 8 GB disco, IP statico `192.168.1.226`, avvio al boot).
+- L'app gira con Node.js via **systemd** (`angry-hamster.service`, utente
+  dedicato `hamster`, sandbox `ProtectSystem=strict`); dati persistenti in
+  `/opt/angry-hamster/data`. Il Dockerfile resta per l'esecuzione locale.
+- Esposta tramite il **tunnel cloudflared** già attivo sull'host Proxmox
+  (gestito da dashboard): hostname pubblico `games.cysalazar.com` →
+  `http://192.168.1.226:3000` + CNAME proxied verso
+  `<tunnel-id>.cfargotunnel.com`. Nessuna porta aperta sul router.
+- L'app serve lo stesso contenuto su `/` e su `/angry-hamster` (URL frontend
+  relativi), quindi funziona sia in locale alla radice sia dietro il prefisso.
+
+Aggiornamento del deploy: `git archive` → `pct push` → `tar xzf` in
+`/opt/angry-hamster` → `npm ci --omit=dev` → `systemctl restart angry-hamster`.
 
 Le assunzioni e le decisioni prese in autonomia sono documentate in
 [DECISIONS.md](DECISIONS.md).
