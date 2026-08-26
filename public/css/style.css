@@ -83,6 +83,11 @@ html, body {
 
 .player-tag { margin-top: 22px; color: #234; background: rgba(255,255,255,.6); display: inline-block; padding: 6px 14px; border-radius: 999px; }
 
+/* Ritorno al catalogo giochi */
+.launcher-link { margin-top: 14px; }
+.launcher-link a { color: #456; font-size: 14px; text-decoration: none; border-bottom: 1px dotted #789; padding-bottom: 1px; }
+.launcher-link a:hover, .launcher-link a:focus-visible { color: #123; border-bottom-style: solid; }
+
 /* ===== Bottoni ===== */
 
 .btn {
